@@ -1,7 +1,9 @@
 package com.example.Neostudy_Project.controllers;
 
+import com.example.Neostudy_Project.dto.CreditDto;
 import com.example.Neostudy_Project.dto.LoanOfferDto;
 import com.example.Neostudy_Project.dto.LoanStatementRequestDto;
+import com.example.Neostudy_Project.dto.ScoringDataDto;
 import com.example.Neostudy_Project.services.LoanCalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +27,10 @@ public class LoanCalculatorController {
         return ResponseEntity.ok(offers);
     }
 
-
+    @PostMapping("/calc")
+    public ResponseEntity<CreditDto> calculateCredit(@RequestBody @Validated ScoringDataDto scoringData) {
+        CreditDto creditDto = loanCalculatorService.calculateCredit(scoringData);
+        return ResponseEntity.ok(creditDto);
+    }
 }
+
