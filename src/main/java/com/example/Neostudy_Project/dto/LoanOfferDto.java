@@ -1,16 +1,27 @@
 package com.example.Neostudy_Project.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Schema(description = "Предложение по кредиту")
 public class LoanOfferDto {
+    @Schema(description = "Идентификатор")
     private UUID statementId;
+    @Schema(description = "Запрашиваемая сумма")
     private BigDecimal requestedAmount;
+    @Schema(description = "Итоговая сумма")
     private BigDecimal totalAmount;
+    @Schema(description = "Срок взятия кредита")
     private Integer term;
+    @Schema(description = "Ежемесячный платёж")
     private BigDecimal monthlyPayment;
+    @Schema(description = "Ставка по кредиту")
     private BigDecimal rate;
+    @Schema(description = "Включена ли страховка в стоимость")
     private Boolean isInsuranceEnabled;
+    @Schema(description = "Работает ли клиент официально")
     private Boolean isSalaryClient;
 
     public UUID getStatementId() {
