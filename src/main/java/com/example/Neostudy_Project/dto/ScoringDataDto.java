@@ -1,25 +1,45 @@
 package com.example.Neostudy_Project.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Schema(description = "Данные оценки")
 public class ScoringDataDto {
+    @Schema(description = "Сумма")
     private BigDecimal amount;
+    @Schema(description = "Срок взятия кредита")
     private Integer term;
+    @Schema(description = "Имя")
     private String firstName;
+    @Schema(description = "Фамилия")
     private String lastName;
+    @Schema(description = "Отчество")
     private String middleName;
+    @Schema(description = "Пол")
     private Gender gender; // Enum
+    @Schema(description = "Дата рождения")
     private LocalDate birthdate;
+    @Schema(description = "Серия паспорта")
     private String passportSeries;
+    @Schema(description = "Номер паспорта")
     private String passportNumber;
+    @Schema(description = "Дата выдачи паспорта")
     private LocalDate passportIssueDate;
+    @Schema(description = "Место выдачи паспорта")
     private String passportIssueBranch;
+    @Schema(description = "Семейное положение")
     private MaritalStatus maritalStatus; // Enum
+    @Schema(description = "Зависимая сумма")
     private Integer dependentAmount;
+    @Schema(description = "Информация о месте работы")
     private EmploymentDto employment;
+    @Schema(description = "Номер личного дела")
     private String accountNumber;
+    @Schema(description = "Включена ли страховка в стоимость")
     private Boolean isInsuranceEnabled;
+    @Schema(description = "Работает ли клиент официально")
     private Boolean isSalaryClient;
 
     public BigDecimal getAmount() {

@@ -1,13 +1,22 @@
 package com.example.Neostudy_Project.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.math.BigDecimal;
 
+@Schema(description = "Сущность работника")
 public class EmploymentDto {
+    @Schema(description = "Статус работника")
     private EmploymentStatus employmentStatus; // Enum
+    @Schema(description = "ИНН работника")
     private String employerINN;
+    @Schema(description = "Заработная плата работника")
     private BigDecimal salary;
+    @Schema(description = "Должность")
     private Position position; // Enum
+    @Schema(description = "Полный опыт работы")
     private Integer workExperienceTotal;
+    @Schema(description = "Опыт работы в текущей организации")
     private Integer workExperienceCurrent;
 
     public EmploymentStatus getEmploymentStatus() {
