@@ -4,7 +4,6 @@ import com.example.Neostudy_Project.converters.PassportAttributeConverter;
 import com.example.Neostudy_Project.dto.Gender;
 import com.example.Neostudy_Project.dto.MaritalStatus;
 import jakarta.persistence.*;
-import org.hibernate.annotations.Type;
 
 import java.util.Date;
 import java.util.UUID;
@@ -19,12 +18,13 @@ public class Client {
     private String middle_name;
     private Date birth_date;
     private String email;
-    @Column(columnDefinition = "character varying")
+    @Enumerated(EnumType.STRING)
     private Gender gender;
-    @Column(columnDefinition = "character varying")
+    @Enumerated(EnumType.STRING)
     private MaritalStatus marital_status;
     private Integer dependent_amount;
     @Convert(converter = PassportAttributeConverter.class)
+    @Column(columnDefinition = "jsonb")
     private Passport passport;
 
 }

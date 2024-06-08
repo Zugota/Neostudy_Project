@@ -4,31 +4,31 @@ import com.example.Neostudy_Project.models.Passport;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
+
+import jakarta.persistence.Converter;
 import org.postgresql.util.PGobject;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
-public class PassportAttributeConverter implements AttributeConverter<Passport, PGobject> {
+@Converter(autoApply = true)
+public class PassportAttributeConverter implements AttributeConverter<Passport, String> {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    public PGobject convertToDatabaseColumn(Passport passportData) {
-        if (passportData == null) return null;
+    public String convertToDatabaseColumn(Passport passportData) {
         try {
-            PGobject pgObject = new PGobject();
-            pgObject.setType("jsonb");
-            pgObject.setValue(objectMapper.writeValueAsString(passportData));
-            return pgObject;
-        } catch (SQLException | JsonProcessingException e) {
-            throw new RuntimeException("Ошибка конвертора", e);
+            return objectMapper.writeValueAsString(passportData);
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Error converting Passport to JSON", e);
         }
     }
 
     @Override
-    public Passport convertToEntityAttribute(PGobject obj) {
+    public Passport convertToEntityAttribute(String s) {
         try {
-            return objectMapper.readValue(obj.getValue(), Passport.class);
+            return objectMapper.readValue(s, Passport.class);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Ошибка конвертора", e);
         }
