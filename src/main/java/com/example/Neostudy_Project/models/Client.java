@@ -25,6 +25,10 @@ public class Client {
     private Integer dependent_amount;
     @Convert(converter = PassportAttributeConverter.class)
     @Column(columnDefinition = "jsonb")
-    private Passport passport;
+    private Passport passport_id;
+    @Convert(converter = PassportAttributeConverter.class)
+    @Column(columnDefinition = "jsonb")
+    private Employment employment_id;
+    private String account_number;
 
 }
