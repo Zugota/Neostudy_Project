@@ -3,7 +3,7 @@ package com.example.Neostudy_Project.models;
 import com.example.Neostudy_Project.dto.EmploymentStatus;
 import com.example.Neostudy_Project.dto.Position;
 import jakarta.persistence.*;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
+
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
