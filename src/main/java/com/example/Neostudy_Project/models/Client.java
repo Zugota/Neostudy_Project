@@ -1,5 +1,6 @@
 package com.example.Neostudy_Project.models;
 
+import com.example.Neostudy_Project.converters.EmploymentAttributeConverter;
 import com.example.Neostudy_Project.converters.PassportAttributeConverter;
 import com.example.Neostudy_Project.dto.Gender;
 import com.example.Neostudy_Project.dto.MaritalStatus;
@@ -26,7 +27,7 @@ public class Client {
     @Convert(converter = PassportAttributeConverter.class)
     @Column(columnDefinition = "jsonb")
     private Passport passport_id;
-    @Convert(converter = PassportAttributeConverter.class)
+    @Convert(converter = EmploymentAttributeConverter.class)
     @Column(columnDefinition = "jsonb")
     private Employment employment_id;
     private String account_number;

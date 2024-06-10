@@ -5,9 +5,11 @@ import com.example.Neostudy_Project.models.StatusHistory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 import java.io.IOException;
 
+@Converter(autoApply = true)
 public class StatusHistoryAttributeConverter implements AttributeConverter<StatusHistory, String> {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();

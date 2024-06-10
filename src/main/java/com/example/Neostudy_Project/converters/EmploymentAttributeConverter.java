@@ -5,9 +5,11 @@ import com.example.Neostudy_Project.models.Passport;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 import java.io.IOException;
 
+@Converter(autoApply = true)
 public class EmploymentAttributeConverter implements AttributeConverter<Employment, String> {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
