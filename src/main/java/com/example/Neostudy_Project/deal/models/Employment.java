@@ -1,12 +1,11 @@
-package com.example.Neostudy_Project.models;
+package com.example.Neostudy_Project.deal.models;
 
-import com.example.Neostudy_Project.dto.EmploymentStatus;
-import com.example.Neostudy_Project.dto.Position;
+import com.example.Neostudy_Project.calculator.dto.EmploymentStatus;
+import com.example.Neostudy_Project.calculator.dto.Position;
 import jakarta.persistence.*;
 
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.util.UUID;
 
 @Entity

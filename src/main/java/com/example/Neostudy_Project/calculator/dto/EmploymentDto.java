@@ -1,4 +1,4 @@
-package com.example.Neostudy_Project.dto;
+package com.example.Neostudy_Project.calculator.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

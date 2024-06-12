@@ -1,15 +1,13 @@
 package com.example.Neostudy_Project.converters;
 
-import com.example.Neostudy_Project.models.Passport;
+import com.example.Neostudy_Project.deal.models.Passport;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 
 import jakarta.persistence.Converter;
-import org.postgresql.util.PGobject;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 @Converter(autoApply = true)
 public class PassportAttributeConverter implements AttributeConverter<Passport, String> {

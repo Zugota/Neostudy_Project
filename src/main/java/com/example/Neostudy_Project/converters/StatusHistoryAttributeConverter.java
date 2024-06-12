@@ -1,7 +1,6 @@
 package com.example.Neostudy_Project.converters;
 
-import com.example.Neostudy_Project.models.Passport;
-import com.example.Neostudy_Project.models.StatusHistory;
+import com.example.Neostudy_Project.deal.models.StatusHistory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;

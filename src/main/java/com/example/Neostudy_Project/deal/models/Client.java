@@ -1,9 +1,9 @@
-package com.example.Neostudy_Project.models;
+package com.example.Neostudy_Project.deal.models;
 
 import com.example.Neostudy_Project.converters.EmploymentAttributeConverter;
 import com.example.Neostudy_Project.converters.PassportAttributeConverter;
-import com.example.Neostudy_Project.dto.Gender;
-import com.example.Neostudy_Project.dto.MaritalStatus;
+import com.example.Neostudy_Project.calculator.dto.Gender;
+import com.example.Neostudy_Project.calculator.dto.MaritalStatus;
 import jakarta.persistence.*;
 
 import java.util.Date;

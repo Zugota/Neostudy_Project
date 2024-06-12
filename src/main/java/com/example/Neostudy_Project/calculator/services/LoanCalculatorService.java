@@ -1,6 +1,6 @@
-package com.example.Neostudy_Project.services;
+package com.example.Neostudy_Project.calculator.services;
 
-import com.example.Neostudy_Project.dto.*;
+import com.example.Neostudy_Project.calculator.dto.*;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

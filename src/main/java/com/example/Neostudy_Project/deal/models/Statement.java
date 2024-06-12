@@ -1,4 +1,4 @@
-package com.example.Neostudy_Project.models;
+package com.example.Neostudy_Project.deal.models;
 
 import com.example.Neostudy_Project.converters.StatusHistoryAttributeConverter;
 import jakarta.persistence.*;

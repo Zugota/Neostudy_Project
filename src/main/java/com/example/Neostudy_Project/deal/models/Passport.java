@@ -1,4 +1,4 @@
-package com.example.Neostudy_Project.models;
+package com.example.Neostudy_Project.deal.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

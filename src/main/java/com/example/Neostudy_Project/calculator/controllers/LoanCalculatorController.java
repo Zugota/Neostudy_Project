@@ -1,10 +1,10 @@
-package com.example.Neostudy_Project.controllers;
+package com.example.Neostudy_Project.calculator.controllers;
 
-import com.example.Neostudy_Project.dto.CreditDto;
-import com.example.Neostudy_Project.dto.LoanOfferDto;
-import com.example.Neostudy_Project.dto.LoanStatementRequestDto;
-import com.example.Neostudy_Project.dto.ScoringDataDto;
-import com.example.Neostudy_Project.services.LoanCalculatorService;
+import com.example.Neostudy_Project.calculator.dto.CreditDto;
+import com.example.Neostudy_Project.calculator.dto.LoanOfferDto;
+import com.example.Neostudy_Project.calculator.dto.LoanStatementRequestDto;
+import com.example.Neostudy_Project.calculator.dto.ScoringDataDto;
+import com.example.Neostudy_Project.calculator.services.LoanCalculatorService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
