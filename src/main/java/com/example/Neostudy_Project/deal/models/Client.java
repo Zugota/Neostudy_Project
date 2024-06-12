@@ -1,7 +1,7 @@
 package com.example.Neostudy_Project.deal.models;
 
-import com.example.Neostudy_Project.converters.EmploymentAttributeConverter;
-import com.example.Neostudy_Project.converters.PassportAttributeConverter;
+import com.example.Neostudy_Project.deal.converters.EmploymentAttributeConverter;
+import com.example.Neostudy_Project.deal.converters.PassportAttributeConverter;
 import com.example.Neostudy_Project.calculator.dto.Gender;
 import com.example.Neostudy_Project.calculator.dto.MaritalStatus;
 import jakarta.persistence.*;

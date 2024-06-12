@@ -1,6 +1,6 @@
 package com.example.Neostudy_Project.deal.models;
 
-import com.example.Neostudy_Project.converters.StatusHistoryAttributeConverter;
+import com.example.Neostudy_Project.deal.converters.StatusHistoryAttributeConverter;
 import jakarta.persistence.*;
 
 import java.sql.Timestamp;
