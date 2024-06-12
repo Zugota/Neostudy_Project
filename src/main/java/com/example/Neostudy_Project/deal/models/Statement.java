@@ -26,4 +26,75 @@ public class Statement {
     @Column(columnDefinition = "jsonb")
     private StatusHistory status_history;
 
+    public UUID getStatement_id() {
+        return statement_id;
+    }
+
+    public void setStatement_id(UUID statement_id) {
+        this.statement_id = statement_id;
+    }
+
+    public Client getClient_id() {
+        return client_id;
+    }
+
+    public void setClient_id(Client client_id) {
+        this.client_id = client_id;
+    }
+
+    public Credit getCredit_id() {
+        return credit_id;
+    }
+
+    public void setCredit_id(Credit credit_id) {
+        this.credit_id = credit_id;
+    }
+
+    public ApplicationStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ApplicationStatus status) {
+        this.status = status;
+    }
+
+    public Timestamp getCreation_date() {
+        return creation_date;
+    }
+
+    public void setCreation_date(Timestamp creation_date) {
+        this.creation_date = creation_date;
+    }
+
+    public String getApplied_offer() {
+        return applied_offer;
+    }
+
+    public void setApplied_offer(String applied_offer) {
+        this.applied_offer = applied_offer;
+    }
+
+    public Timestamp getSign_date() {
+        return sign_date;
+    }
+
+    public void setSign_date(Timestamp sign_date) {
+        this.sign_date = sign_date;
+    }
+
+    public String getSes_code() {
+        return ses_code;
+    }
+
+    public void setSes_code(String ses_code) {
+        this.ses_code = ses_code;
+    }
+
+    public StatusHistory getStatus_history() {
+        return status_history;
+    }
+
+    public void setStatus_history(StatusHistory status_history) {
+        this.status_history = status_history;
+    }
 }
