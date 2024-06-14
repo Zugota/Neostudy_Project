@@ -35,7 +35,7 @@ public class DealController {
     @PostMapping("/offer/select")
     @Operation(summary = "Select a loan offer", description = "Selects one of the loan offers")
     public ResponseEntity<Void> chooseLoanOffer(@Validated @RequestBody LoanOfferDto loanOfferDto) {
-        loanService.chooseLoanOffer(loanOfferDto); //TODO
+        loanService.chooseLoanOffer(loanOfferDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
