@@ -12,7 +12,7 @@ import java.util.UUID;
 
 import com.example.Neostudy_Project.calculator.controllers.LoanCalculatorController;
 import com.example.Neostudy_Project.calculator.dto.*;
-import com.example.Neostudy_Project.dto.*;
+import com.example.Neostudy_Project.deal.dto.*;
 import com.example.Neostudy_Project.calculator.services.LoanCalculatorService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,6 +29,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -56,8 +57,8 @@ class LoanCalculatorControllerTest {
         LoanStatementRequestDto requestDto = new LoanStatementRequestDto();
         requestDto.setAmount(new BigDecimal("150000"));
         requestDto.setTerm(18);
-        requestDto.setFirstName("Минкин");
-        requestDto.setLastName("Иван");
+        requestDto.setFirstName("Иван");
+        requestDto.setLastName("Минкин");
         requestDto.setMiddleName("Максимович");
         requestDto.setEmail("ivan@mail.ru");
         requestDto.setBirthdate(LocalDate.of(1992, 3, 3));
