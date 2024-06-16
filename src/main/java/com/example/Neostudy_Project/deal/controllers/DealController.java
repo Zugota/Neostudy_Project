@@ -26,22 +26,27 @@ public class DealController {
     private LoanService loanService;
 
     @PostMapping("/statement")
-    @Operation(summary = "Calculate loan offers", description = "Calculates possible loan offers")
+    @Operation(
+            summary = "Расчёт предложений кредита"
+    )
     public ResponseEntity<List<LoanOfferDto>> generateLoanOffers(@Validated @RequestBody LoanStatementRequestDto requestDto) {
         List<LoanOfferDto> offers = loanService.generateLoanOffers(requestDto);
         return ResponseEntity.ok(offers);
     }
 
     @PostMapping("/offer/select")
-    @Operation(summary = "Select a loan offer", description = "Selects one of the loan offers")
+    @Operation(
+            summary = "Выбор предложения по кредиту"
+    )
     public ResponseEntity<Void> chooseLoanOffer(@Validated @RequestBody LoanOfferDto loanOfferDto) {
         loanService.chooseLoanOffer(loanOfferDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping("/calculate/{statementId}")
-    @Operation(summary = "Finalize registration and calculate credit",
-            description = "Finalizes the registration and calculates full credit parameters")
+    @Operation(
+            summary = "Конечные расчёты по кредиту"
+    )
     public ResponseEntity<Void> finalizeCreditCalculation(@PathVariable String statementId,
                                                           @Validated @RequestBody FinishRegistrationRequestDto finishRegistrationRequestDto) {
         loanService.finalizeCreditCalculation(statementId, finishRegistrationRequestDto);
